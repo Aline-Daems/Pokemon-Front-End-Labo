@@ -5,4 +5,17 @@ section{
   flex-direction: column;
 }
 
+input[type="submit"] {
+  margin-top:2rem;
+}
+
+select{
+  background: transparent;
+  margin-bottom:0.9rem;
+}
+
+option{
+  background: transparent;
+}
+
 

@@ -28,6 +28,7 @@ export class PlayerService {
   }
 
   register(registerForm : registerForm){
+    console.log(registerForm)
   return this._httpClient.post(this._url+'player/create', registerForm)
   }
 

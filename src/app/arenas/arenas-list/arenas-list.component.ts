@@ -1,20 +1,18 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Arenas} from "../models/arenas";
+import {Arenas} from "../../models/arenas";
 import {Subject, takeUntil} from "rxjs";
-import {ArenasService} from "../services/arenas.service";
+import {ArenasService} from "../../services/arenas.service";
 
 @Component({
-  selector: 'app-arenas',
-  templateUrl: './arenas.component.html',
-  styleUrl: './arenas.component.css'
+  selector: 'app-arenas-list',
+  templateUrl: './arenas-list.component.html',
+  styleUrl: './arenas-list.component.css'
 })
-export class ArenasComponent  implements OnInit, OnDestroy{
-
+export class ArenasListComponent  implements OnInit, OnDestroy{
 
   array!: Arenas[];
 
   $destroyed = new Subject<Boolean>()
-
   constructor(private readonly _arenaService:ArenasService) {
   }
 
@@ -27,11 +25,9 @@ export class ArenasComponent  implements OnInit, OnDestroy{
     })
   };
 
-
   ngOnDestroy(){
 
     this.$destroyed.next(true);
     this.$destroyed.complete();
   }
-
 }
