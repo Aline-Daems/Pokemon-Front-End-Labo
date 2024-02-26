@@ -1,0 +1,22 @@
+<section>
+  <div>
+    <img src="/assets/logo.png">
+  </div>
+
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+    <input type="text" formControlName="pseudo" placeholder="pseudo">
+    <input type="text" formControlName="mail" placeholder="mail">
+    <input type="password" formControlName="password" placeholder="mot de passe">
+    <input type="date" formControlName="birthdate" placeholder="Date d'anniversaire">
+    <input type="text" formControlName="gender" placeholder="Genre">
+    <input type="text" formControlName="role" placeholder="Role">
+    <input type="text" formControlName="arenaId" placeholder="Arenes">
+
+    <input type="submit" value="Inscrire">
+
+  </form>
+
+
+
+</section>

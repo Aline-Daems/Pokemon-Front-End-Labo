@@ -1,0 +1,42 @@
+div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
+button{
+  background:#ffcb05;
+  color:#3d7dca;
+  width: 15rem;
+  height: 5rem;
+  font-weight: bold;
+  border:3px solid #3d7dca;
+  border-radius:25px;
+  font-family: 'Pokemon-hollow';
+  font-size:2rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease;
+  transition: background 0.3s ease;
+
+
+}
+button:hover{
+
+  color:#ffcb05;
+  background:#3d7dca;
+}
+
+
+@font-face {
+  font-family: 'Pokemon-hollow';
+  src: url('/assets/Pokemon-Hollow.ttf');
+
+}
+
+@font-face {
+  font-family: 'Pokemon-solid';
+  src: url('/assets/Pokemon-Solid.ttf');
+
+}

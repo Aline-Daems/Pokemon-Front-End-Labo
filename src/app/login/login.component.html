@@ -1,0 +1,17 @@
+<section>
+  <div>
+    <img src="/assets/logo.png">
+  </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <input type="text" formControlName="login" placeholder="login">
+      <input type="password" formControlName="password" placeholder="password">
+
+      <input type="submit" value="Se connecter">
+
+    </form>
+
+
+
+</section>
