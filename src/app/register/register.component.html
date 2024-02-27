@@ -9,20 +9,21 @@
     <input type="text" formControlName="mail" placeholder="mail">
     <input type="password" formControlName="password" placeholder="mot de passe">
     <input type="date" formControlName="birthdate" placeholder="Date d'anniversaire">
-    <select formControlName="gender" >
+    <input type="number" formControlName="badges" placeholder="Nombre de badges">
+    <select formControlName="gender">
       <option *ngFor="let v of genders" [value]="v">
         {{v}}
       </option>
     </select>
 
-    <select formControlName="role">
-      <option *ngFor="let r of roles" [value]="r">
-        {{r}}
+    <select formControlName="role" [multiple]="true">
+      <option *ngFor="let role of roles" [ngValue]="role">
+        {{role}}
       </option>
     </select>
-    <select formControlName="arenaId">
-      <option *ngFor="let e of array" [value]="e">
-      {{e.city}}
+    <select formControlName="arenaId" [multiple]="true">
+      <option *ngFor="let e of array" [ngValue]="e.arenaId">
+        {{e.city}}
       </option>
 
     </select>
@@ -30,7 +31,6 @@
     <input type="submit" value="Inscrire">
 
   </form>
-
 
 
 </section>

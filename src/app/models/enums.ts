@@ -5,6 +5,18 @@ export enum Genders {
 }
 
 export enum Roles {
-  champion = 'Champion',
-  challenger = 'Challenger'
+  champion,
+  challenger
+}
+
+export enum Category{
+  junior,
+  Senior,
+  Veteran
+}
+
+export enum Status {
+  pending,
+  inProgress,
+  finished,
 }

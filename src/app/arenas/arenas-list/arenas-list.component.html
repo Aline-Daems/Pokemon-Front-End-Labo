@@ -1,5 +1,37 @@
 <h2>Les arènes</h2>
 
-<tr *ngFor="let e of array">
-  <td>{{e.city}}</td>
-</tr>
+<section>
+
+  <table>
+
+    <thead>
+    <tr>
+      <th>Ville</th>
+      <th>Nombre de joueur inscrits</th>
+      <th>Joueur Minimum</th>
+      <th>Joueur Maximum</th>
+
+      <th>Nombre de badge minimum</th>
+      <th>Date de fermeture</th>
+      <th>Catégorie</th>
+      <th>Status</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let e of array">
+      <td>{{e.city}}</td>
+      <td>{{e.nbMinPlayer}}</td>
+      <td>{{e.nbMaxPlayer}}</td>
+      <td>{{e.nbPlayer}}</td>
+      <td>{{e.badgeMin}}</td>
+      <td>{{e.closingDate}}</td>
+      <td>{{e.category}}</td>
+      <td>{{e.status}}</td>
+    </tr>
+
+  </table>
+
+
+</section>
+
+
+

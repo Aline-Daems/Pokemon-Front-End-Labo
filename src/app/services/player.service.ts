@@ -10,7 +10,7 @@ import {BehaviorSubject, tap} from "rxjs";
 export class PlayerService {
 
   userConnected = new BehaviorSubject<string| null>(null)
-
+  currentUser = {pseudo: this.userConnected.getValue()}
   constructor(private readonly _httpClient:HttpClient, @Inject(URLAPI) private _url:string) { }
 
   login(loginForm:loginForm){
@@ -29,7 +29,11 @@ export class PlayerService {
 
   register(registerForm : registerForm){
     console.log(registerForm)
-  return this._httpClient.post(this._url+'player/create', registerForm)
+    return this._httpClient.post(this._url+'player/create', registerForm)
+  }
+
+  getCurrentUser() {
+    return this.currentUser;
   }
 
 }

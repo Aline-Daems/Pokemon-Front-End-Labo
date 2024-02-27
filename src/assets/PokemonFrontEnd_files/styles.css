@@ -1,0 +1,58 @@
+/* src/styles.css */
+:root {
+  --jaune: #ffcb05;
+  --bleuClair:#3d7dca;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(/assets/background-login.png) no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+a {
+  text-decoration: none;
+  color: #333131;
+}
+form {
+  background: rgba(253, 246, 241, 0.76);
+  flex-direction: column;
+  display: flex;
+  padding: 2rem;
+  box-shadow: 0px 3px 13px 12px rgba(0, 0, 0, 0.54);
+  width: 15rem;
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #939393;
+  margin-bottom: 1rem;
+}
+input[type=submit] {
+  border: 1px solid #3d7dca;
+  border-radius: 25px;
+  background: #ffcb05;
+  cursor: pointer;
+  color: #3d7dca;
+  padding: 0.2rem;
+  font-family: "Pokemon-solid";
+}
+@font-face {
+  font-family: "Pokemon-hollow";
+  src: url(/assets/Pokemon-Hollow.ttf);
+}
+@font-face {
+  font-family: "Pokemon-solid";
+  src: url(/assets/Pokemon-Solid.ttf);
+}
+@font-face {
+  font-family: "Gloria Hallelujah";
+  src: url(/assets/GloriaHallelujah-Regular.ttf);
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles.css.map */

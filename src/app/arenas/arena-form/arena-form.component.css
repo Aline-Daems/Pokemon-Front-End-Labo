@@ -1,0 +1,24 @@
+section{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+div{
+  display: flex;
+}
+
+select{
+  background: transparent;
+  margin-bottom:0.9rem;
+}
+
+option{
+  background: transparent;
+}
+
+
+p{
+  margin-left: 1rem;
+  margin-top:-0.2rem;
+}

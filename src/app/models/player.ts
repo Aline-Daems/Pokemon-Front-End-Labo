@@ -1,4 +1,4 @@
-import {Genders} from "./enums";
+import {Genders, Roles} from "./enums";
 
 export interface Player {
 
@@ -26,7 +26,7 @@ export interface registerForm{
   birthdate: Date;
   gender: Genders;
   badges: number;
-  role: string[];
+  role: Roles;
   arenaId: number[];
 
 }
