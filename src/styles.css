@@ -59,6 +59,44 @@ input[type="submit"] {
   font-family: 'Pokemon-solid';
 }
 
+div{
+  text-align: center;
+
+
+}
+
+tr{
+  background: rgba(253, 246, 241, 0.76);
+  text-align: center;
+  border: 1px solid black;
+
+}
+
+td{
+  border: 1px solid black;
+  padding:0.5rem;
+  font-family: "Gloria Hallelujah", cursive;
+
+}
+
+th{
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  padding:1rem;
+  background: var(--bleuClair);
+  font-family: "Gloria Hallelujah", cursive;
+  color:var(--jaune)
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table{
+  border-collapse: collapse;
+}
+
 
 
 @font-face {

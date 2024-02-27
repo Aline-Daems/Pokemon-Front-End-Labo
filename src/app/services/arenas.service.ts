@@ -22,6 +22,9 @@ export class ArenasService {
     return this._httpClient.post(this._url+"arena/create", arena);
   }
 
+  getOne(id:number){
+    return this._httpClient.get<Arenas>(this._url+`arena/${id}`)
+  }
 
 }
 
