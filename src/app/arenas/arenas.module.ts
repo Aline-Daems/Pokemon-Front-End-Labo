@@ -5,12 +5,14 @@ import { ArenasRoutingModule } from './arenas-routing.module';
 import { ArenasListComponent } from './arenas-list/arenas-list.component';
 import { ArenaFormComponent } from './arena-form/arena-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { OneArenaComponent } from './one-arena/one-arena.component';
 
 
 @NgModule({
   declarations: [
     ArenasListComponent,
-    ArenaFormComponent
+    ArenaFormComponent,
+    OneArenaComponent
   ],
   exports: [
     ArenasListComponent

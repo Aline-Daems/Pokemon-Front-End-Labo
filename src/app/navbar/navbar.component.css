@@ -8,8 +8,20 @@ nav{
 
 a{
   margin-right:2rem;
-  margin-top:2rem;
-  font-family: "Gloria Hallelujah", cursive;
   font-weight: 400;
 
+}
+
+div p {
+  margin-left:1rem;
+  font-weight: bold;
+
+}
+
+section{
+
+  display:flex;
+  justify-content: space-between;
+  margin-top:1rem;
+  font-family: "Gloria Hallelujah", cursive;
 }

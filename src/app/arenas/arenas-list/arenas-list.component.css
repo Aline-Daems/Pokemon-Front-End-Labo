@@ -1,9 +1,6 @@
-h2{
+div{
   text-align: center;
-  font-family: Pokemon-solid;
-  font-size: 2rem;
-  color: var(--jaune);
-  -webkit-text-stroke: 2px var(--bleuClair);
+
 
 }
 

@@ -4,6 +4,7 @@ import {ArenasComponent} from "./arenas.component";
 import {RegisterComponent} from "../register/register.component";
 import {ArenasListComponent} from "./arenas-list/arenas-list.component";
 import {ArenaFormComponent} from "./arena-form/arena-form.component";
+import {OneArenaComponent} from "./one-arena/one-arena.component";
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
     children:[
       {path:"register", component:RegisterComponent},
       {path:"all", component:ArenasListComponent},
-      {path:"new", component:ArenaFormComponent}
+      {path:"new", component:ArenaFormComponent},
+      {path:":arenaId", component: OneArenaComponent}
     ]
   }
 ];

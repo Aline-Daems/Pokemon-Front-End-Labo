@@ -22,5 +22,6 @@ export class ArenasService {
     return this._httpClient.post(this._url+"arena/create", arena);
   }
 
+
 }
 

@@ -1,5 +1,6 @@
-<h2>Les arènes</h2>
-
+<div>
+  <img src="/assets/logo.png">
+</div>
 <section>
 
   <table>
@@ -18,7 +19,7 @@
     </tr>
     </thead>
     <tr *ngFor="let e of array">
-      <td>{{e.city}}</td>
+      <td><a routerLink="/arenas/{{e.arenaId}}">{{e.city}}</a></td>
       <td>{{e.nbMinPlayer}}</td>
       <td>{{e.nbMaxPlayer}}</td>
       <td>{{e.nbPlayer}}</td>

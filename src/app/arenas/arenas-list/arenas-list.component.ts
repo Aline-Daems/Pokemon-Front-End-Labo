@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Arenas} from "../../models/arenas";
 import {Subject, takeUntil} from "rxjs";
 import {ArenasService} from "../../services/arenas.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-arenas-list',
@@ -11,9 +12,10 @@ import {ArenasService} from "../../services/arenas.service";
 export class ArenasListComponent  implements OnInit, OnDestroy{
 
   array!: Arenas[];
+  arena!:Arenas
 
   $destroyed = new Subject<Boolean>()
-  constructor(private readonly _arenaService:ArenasService) {
+  constructor(private readonly _arenaService:ArenasService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -23,6 +25,10 @@ export class ArenasListComponent  implements OnInit, OnDestroy{
       error:(err)=>console.log(err.err()),
       complete:()=>console.log("Chargement des arènes effectué")
     })
+
+
+
+
   };
 
   ngOnDestroy(){
