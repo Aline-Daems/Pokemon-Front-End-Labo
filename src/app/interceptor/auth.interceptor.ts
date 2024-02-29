@@ -1,6 +1,7 @@
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpInterceptorFn, HttpRequest} from '@angular/common/http';
 import {Observable} from "rxjs";
 import {Injectable} from "@angular/core";
+import {jwtDecode} from "jwt-decode";
 
 @Injectable()
 export class authInterceptor implements HttpInterceptor {
@@ -8,9 +9,10 @@ export class authInterceptor implements HttpInterceptor {
 
     console.log("OK")
 
-    jwtSecret: ""
 
-    let JWT = localStorage.getItem("token");
+
+    let JWT = localStorage.getItem("Token");
+    console.log(JWT)
     if (JWT) {
       const nouvelleReq = req.clone({
 

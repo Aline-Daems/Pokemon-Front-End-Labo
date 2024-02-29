@@ -13,7 +13,7 @@ export class LoginComponent {
   loginForm: FormGroup;
 
   constructor(private readonly _playerService : PlayerService, private readonly _formBuilder:FormBuilder, private readonly _router:Router) {
-
+    localStorage.clear();
     this.loginForm = this._formBuilder.group({
 
       login:this._formBuilder.control('', Validators.required),

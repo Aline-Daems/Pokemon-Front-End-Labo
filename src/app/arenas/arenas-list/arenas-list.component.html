@@ -16,6 +16,7 @@
       <th>Date de fermeture</th>
       <th>Catégorie</th>
       <th>Status</th>
+      <th>Inscription</th>
     </tr>
     </thead>
     <tr *ngFor="let e of array">
@@ -26,10 +27,22 @@
       <td>{{e.badgeMin}}</td>
       <td>{{e.closingDate}}</td>
       <td>{{e.category}}</td>
-      <td>{{e.status}}</td>
+      <td *ngIf="e.status === 'pending'">En attente de joueur</td>
+
+      <td *ngIf="e.status === 'inProgress'">En cours</td>
+      <td *ngIf="e.status === 'finished'">Terminé</td>
+      <td *ngIf="e.status === 'pending'">
+        <button (click)="newPlayer(e.arenaId)">Je te choisis !</button>
+
+      </td>
+      <td *ngIf=" e.status === 'finished' || e.status === 'inProgress' ">
+        trop tard !
+      </td>
     </tr>
 
   </table>
+
+
 
 
 </section>

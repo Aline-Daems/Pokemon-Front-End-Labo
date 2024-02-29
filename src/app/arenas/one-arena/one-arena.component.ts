@@ -12,7 +12,7 @@ export class OneArenaComponent implements OnInit{
   arenaId!:number;
   arena!: Arenas
 
-  constructor(private route:ActivatedRoute, private arenaService:ArenasService) {
+  constructor(private route:ActivatedRoute, private _arenaService:ArenasService) {
   }
 
   ngOnInit(){
@@ -21,11 +21,26 @@ export class OneArenaComponent implements OnInit{
   }
 
   getOne(id:number){
-    this.arenaService.getOne(id).subscribe(
+    this._arenaService.getOne(id).subscribe(
       arena=> {
         this.arena = arena
       }
     )
   }
+
+  start(id:number){
+    this._arenaService.start(id).subscribe(
+      {
+        next: () => {
+          console.log("Arena  effectuée");
+          this.getOne(this.arenaId);
+        },
+        error:(err)=>console.log(" erreur ",err()),
+        complete:() => console.log("Tournoi démarré")
+      }
+    )
+  }
+
+
 
 }

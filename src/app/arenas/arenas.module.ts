@@ -6,13 +6,19 @@ import { ArenasListComponent } from './arenas-list/arenas-list.component';
 import { ArenaFormComponent } from './arena-form/arena-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { OneArenaComponent } from './one-arena/one-arena.component';
+import { MyArenasComponent } from './my-arenas/my-arenas.component';
+
+
 
 
 @NgModule({
   declarations: [
     ArenasListComponent,
     ArenaFormComponent,
-    OneArenaComponent
+    OneArenaComponent,
+    MyArenasComponent,
+
+
   ],
   exports: [
     ArenasListComponent

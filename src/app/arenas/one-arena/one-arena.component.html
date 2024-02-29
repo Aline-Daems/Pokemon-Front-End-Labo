@@ -19,7 +19,7 @@
       <th>Status</th>
     </tr>
     </thead>
-    <tr>
+    <tr *ngIf="arena">
 
       <td>{{arena.city}}</td>
       <td>{{arena.nbPlayer}}</td>
@@ -29,15 +29,17 @@
       <td>{{arena.badgeMax}}</td>
       <td>{{arena.closingDate}}</td>
       <td>{{arena.category}}</td>
-      <td>{{arena.status}}</td>
 
+      <td *ngIf="arena.status === 'pending'">En attente de joueur</td>
 
-
+      <td *ngIf="arena.status === 'inProgress'">En cours</td>
+      <td *ngIf="arena.status === 'finished'">Terminé</td>
     </tr>
 
   </table>
 
-  <button>S'inscrire !</button>
+
+  <button (click) = start(arenaId)> Fight!</button>
 
 </section>
 

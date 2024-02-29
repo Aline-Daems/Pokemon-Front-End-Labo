@@ -1,0 +1,31 @@
+section{
+  flex-direction: column;
+
+}
+
+button{
+  margin-top:5rem;
+  background:var(--jaune);
+  color:var(--bleuClair);
+  width: 9rem;
+  height: 3rem;
+  font-weight: bold;
+  border:3px solid var(--bleuClair);
+  border-radius:25px;
+  font-family: 'Pokemon-hollow';
+  font-size:1rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease;
+  transition: background 0.3s ease;
+  padding-bottom: 0.5rem;
+
+}
+button:hover{
+
+  color:var(--jaune);
+  background:var(--bleuClair);
+  font-family: 'Pokemon-solid';
+}
+

@@ -1,0 +1,26 @@
+<div>
+    <img src="/assets/logo.png">
+</div>
+<section>
+
+    <table>
+
+        <thead>
+        <tr>
+            <th>Ville</th>
+
+        </tr>
+        </thead>
+        <tr *ngFor="let e of array">
+
+
+            <td>{{e.city}}</td>
+            <button (click)="unrollement(e.arenaId)">Se desinscrire</button>
+        </tr>
+
+    </table>
+
+
+
+
+</section>

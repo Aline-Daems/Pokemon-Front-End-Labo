@@ -5,14 +5,14 @@ div{
   height:100%;
 }
 button{
-  background:#ffcb05;
-  color:#3d7dca;
+  background:var(--jaune);
+  color:var(--bleuClair);
   width: 15rem;
   height: 5rem;
   font-weight: bold;
-  border:3px solid #3d7dca;
+  border:3px solid var(--bleuClair);
   border-radius:25px;
-  font-family: 'Pokemon-hollow';
+  font-family: 'Pokemon-solid';
   font-size:2rem;
   display:flex;
   justify-content: center;
@@ -21,11 +21,12 @@ button{
   transition: background 0.3s ease;
 
 
+
 }
 button:hover{
 
-  color:#ffcb05;
-  background:#3d7dca;
+  color:var(--jaune);
+  background:var(--bleuClair);
 }
 
 

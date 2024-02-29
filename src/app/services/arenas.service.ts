@@ -26,5 +26,21 @@ export class ArenasService {
     return this._httpClient.get<Arenas>(this._url+`arena/${id}`)
   }
 
+  start(id:number){
+    return this._httpClient.put(this._url+`arena/start/${id}`, null);
+  }
+
+  newPlayer(arenaId:number){
+    return this._httpClient.put(this._url+ `player/register/${arenaId}`, null)
+  }
+
+  unenrollement(arenaId:number){
+    return this._httpClient.delete(this._url+ `player/unregister/${arenaId}`)
+  }
+
+  myArenas(){
+    return this._httpClient.get<Arenas[]>(this._url+ `player/arenas/`)
+  }
+
 }
 
